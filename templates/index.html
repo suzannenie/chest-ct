@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block top %}
+
+{% endblock %}
+
+{% block content %}
+<br>
+<div class="center">
+    <div id="home">
+        <button type="button" class="btn btn-secondary"
+            onclick="clickedButton()">Click button to communicate with server
+        </button>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript"
+        src="{{url_for('static', filename='main.js')}}"></script>
+{% endblock %}
