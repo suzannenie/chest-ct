@@ -8,8 +8,17 @@
 <br>
 <div class="center">
     <div id="home">
+        <div id="img_filename">img</div>
+        <div id="img"></div>
+
+        <select id="label" method="GET" action="/">
+            {% for label in LABELS %}
+                <option value="{{label}}" SELECTED>{{label}}</option>"
+            {% endfor %}
+        </select>
+
         <button type="button" class="btn btn-secondary"
-            onclick="clickedButton()">Click button to communicate with server
+            onclick="submitAnswer()">Submit answer
         </button>
     </div>
 </div>

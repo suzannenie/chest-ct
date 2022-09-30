@@ -6,3 +6,5 @@ A front-end/web app where Chest CTs can be viewed and medical students can guess
 `pip install -r requirements.txt`
 
 `python3 main.py`
+
+Make sure the CheXpert directory is in the static directory.
