@@ -1,0 +1,48 @@
+.v-data-table-header > tr > th {
+    vertical-align: baseline !important;
+    padding-top: 20px !important;
+}
+.v-data-table > .v-data-table__wrapper > table > tbody > tr > td {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+.v-data-table__empty-wrapper {
+    td {
+        width: 100vw;
+    }
+}
+@media only screen and (max-width: 599px) {
+    .v-data-table > .v-data-table__wrapper > table > thead > tr > th {
+        padding-bottom: 15px !important;
+    }
+
+    .v-data-table > .v-data-table__wrapper > table > tbody > tr > td {
+        height: auto !important;
+    }
+
+    .v-data-table > .v-data-table__wrapper > table > tbody > tr > td,
+    .v-data-table > .v-data-table__wrapper > table > tbody > tr > th {
+        border-bottom: none !important;
+    }
+
+    .v-data-table-header-mobile {
+        display: none !important;
+    }
+
+    .v-data-table
+    > .v-data-table__wrapper
+    > table
+    > tbody
+    > tr:nth-of-type(even)
+    > td:not(.expanded) {
+        background-color: white;
+    }
+
+    .v-data-table > .v-data-table__wrapper > table > tbody > tr > td:last-child {
+        padding-bottom: 30px !important;
+    }
+
+    .v-data-table > .v-data-table__wrapper > table > tbody > tr > td:first-child {
+        padding-top: 30px !important;
+    }
+}

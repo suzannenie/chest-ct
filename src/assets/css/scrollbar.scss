@@ -1,0 +1,20 @@
+* {
+    scrollbar-width: thin !important;
+    scrollbar-color: #d2d2d7 transparent !important;
+}
+*::-webkit-scrollbar {
+    width: 3px !important;
+    height: 3px !important;
+}
+/* Track */
+*::-webkit-scrollbar-track {
+    background-color: transparent !important;
+}
+/* Handle */
+*::-webkit-scrollbar-thumb:vertical, *::-webkit-scrollbar-thumb:horizontal {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:vertical:hover, *::-webkit-scrollbar-thumb:horizontal:hover {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+}

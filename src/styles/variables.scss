@@ -1,0 +1,18 @@
+$material-light:(
+        background: #ffffff,
+        surface: #ffffff,
+        cards: #ffffff,
+        toolbar: #ffffff,
+        app-bar: #ffffff,
+        status-bar: (
+                regular: #ffffff
+        ),
+        calendar: (
+                background-color: #ffffff,
+        )
+);
+$data-table-expanded-content-box-shadow: none;
+
+html {
+        background-color: #ffffff
+}
