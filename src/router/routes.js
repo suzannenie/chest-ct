@@ -29,7 +29,7 @@ const routes =
                 content: () => import("@/views/Results"),
             },
             meta: {
-                title: "pages.question.title",
+                title: "pages.results.title",
                 public: true,
             }
         },
@@ -41,6 +41,17 @@ const routes =
             },
             meta: {
                 title: "pages.question.title",
+                public: true,
+            }
+        },
+        {
+            path: "/leaderboard",
+            name: "LeaderBoard",
+            components: {
+                content: () => import("@/views/LeaderBoard"),
+            },
+            meta: {
+                title: "pages.leaderboard.title",
                 public: true,
             }
         },
