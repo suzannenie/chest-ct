@@ -15,7 +15,7 @@ export default {
         }
       ],
       selectedDiseases: [],
-      Diseases: [
+      diseases: [
         {
           text: "Cancer",
           value: "cancer"
