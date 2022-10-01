@@ -1,8 +1,11 @@
 <script>
+import {mdiCheckboxBlankOutline, mdiCloseBox, mdiMinusBox} from "@mdi/js";
+
 export default {
   name: "Start",
   data: function () {
     return {
+      numberOfQuestions: 10,
       gameMode: "first",
       gameModes: [
         {
@@ -74,6 +77,35 @@ export default {
         }
       ]
     }
+  },
+  computed: {
+    allDiseasesSelected () {
+      return this.selectedDiseases.length === this.diseases.length
+    },
+    someDiseasesSelected () {
+      return this.selectedDiseases.length > 0 && !this.allDiseasesSelected
+    },
+    icon() {
+      if (this.allDiseasesSelected) return mdiCloseBox
+      if (this.someDiseasesSelected) return mdiMinusBox
+      return mdiCheckboxBlankOutline
+    },
+    color() {
+      if (this.allDiseasesSelected) return "primary"
+      if (this.someDiseasesSelected) return "secondary"
+      return null
+    },
+  },
+  methods: {
+    toggle () {
+      this.$nextTick(() => {
+        if (this.selectedDiseases.length > 0) {
+          this.selectedDiseases = []
+        } else {
+          this.selectedDiseases = this.diseases.map(({value}) => value)
+        }
+      })
+    },
   }
 }
 </script>
@@ -130,10 +162,52 @@ export default {
           item-text="text"
           item-value="value"
           class="select-field"
+          multiple
           solo
           flat
           outlined
           hide-details
+        >
+          <template #prepend-item>
+            <v-list-item
+              ripple
+              @mousedown.prevent
+              @click="toggle"
+            >
+              <v-list-item-action>
+                <v-icon :color="color">
+                  {{ icon }}
+                </v-icon>
+              </v-list-item-action>
+              <v-list-item-content>
+                <v-list-item-title>
+                  Select All
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <v-divider class="mt-2" />
+          </template>
+          <template v-if="selectedDiseases.length > 1" #selection="{index}">
+            <span v-if="index === 0">
+              {{ selectedDiseases.length }} selected
+            </span>
+          </template>
+        </v-select>
+      </v-col>
+      <v-col
+        cols="12"
+        class="d-flex align-center justify-space-around"
+      >
+        <span class="pr-2 select-label">Number of questions</span>
+        <v-text-field
+          v-model="numberOfQuestions"
+          class="select-field"
+          solo
+          flat
+          outlined
+          hide-details
+          type="number"
+          pattern="\d*"
         />
       </v-col>
       <v-col cols="6">
