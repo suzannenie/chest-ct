@@ -15,30 +15,62 @@ export default {
         }
       ],
       selectedDiseases: [],
-      diseases: [
+      Diseases: [
         {
-          text: "Cancer",
-          value: "cancer"
+          text: No Finding,
+          value: no_finding
         },
         {
-          text: "Diabetes",
-          value: "diabetes"
+          text: Enlarged Cardiomediastinum,
+          value: enlarged_cardiomediastinum
         },
         {
-          text: "Heart Disease",
-          value: "heart"
+          text: Cardiomegaly,
+          value: cardiomegaly
         },
         {
-          text: "HIV",
-          value: "hiv"
+          text: Lung Lesion,
+          value: lung_lesion
         },
         {
-          text: "Malaria",
-          value: "malaria"
+          text: Lung Opacity,
+          value: lung_opacity
         },
         {
-          text: "Tuberculosis",
-          value: "tuberculosis"
+          text: Edema,
+          value: edema
+        },
+        {
+          text: Consolidation,
+          value: consolidation
+        },
+        {
+          text: Pneumonia,
+          value: pneumonia
+        },
+        {
+          text: Atelectasis,
+          value: atelectasis
+        },
+        {
+          text: Pneumothorax,
+          value: pneumothorax
+        },
+        {
+          text: Pleural Effusion,
+          value: pleural_effusion
+        },
+        {
+          text: Pleural Other,
+          value: pleural_other
+        },
+        {
+          text: Fracture,
+          value: fracture
+        },
+        {
+          text: Support Devices,
+          value: support_devices
         }
       ]
     }
