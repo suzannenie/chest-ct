@@ -80,51 +80,81 @@ export default {
 
 <template>
   <v-container>
-    <v-card>
-      <v-img src="@/assets/logo.png" />
-      <v-card-title>
-        Computer tomography copilot training
-      </v-card-title>
-      <v-card-text>
-        Please select the game mode, the number of questions and which diseases yoy want to master.
-        <v-row>
-          <v-col cols="6">
-            <span>Game mode</span>
-          </v-col>
-          <v-col cols="6">
-            <v-select
-              v-model="gameMode"
-              :items="gameModes"
-              item-text="text"
-              item-value="value"
-              solo
-              flat
-            />
-          </v-col>
-          <v-col cols="6">
-            <span>I will practice to detect</span>
-          </v-col>
-          <v-col cols="6">
-            <v-select
-              v-model="selectedDiseases"
-              :items="diseases"
-              item-text="text"
-              item-value="value"
-              solo
-              flat
-            />
-          </v-col>
-        </v-row>
-      </v-card-text>
-      <v-card-actions>
+    <v-row
+      justify="center"
+      align="center"
+    >
+      <v-col cols="12">
+        <v-img
+          max-width="500px"
+          src="@/assets/logo.png"
+          class="mx-auto"
+        />
+      </v-col>
+      <v-col
+        cols="12"
+        class="text-center"
+      >
+        <p class="text-h2 font-weight-bold">
+          Computer tomography copilot training
+        </p>
+        <p class="text-h5">
+          Please select the game mode, the number of questions and which diseases yoy want to master.
+        </p>
+      </v-col>
+      <v-col
+        cols="12"
+        class="d-flex align-center justify-space-around"
+      >
+        <span class="pr-2 select-label">Game mode</span>
+        <v-select
+          v-model="gameMode"
+          :items="gameModes"
+          item-text="text"
+          item-value="value"
+          solo
+          class="select-field"
+          flat
+          outlined
+          hide-details
+        />
+      </v-col>
+      <v-col
+        cols="12"
+        class="d-flex align-center justify-space-around"
+      >
+        <span class="pr-2 select-label">Diseases</span>
+        <v-select
+          v-model="selectedDiseases"
+          :items="diseases"
+          item-text="text"
+          item-value="value"
+          class="select-field"
+          solo
+          flat
+          outlined
+          hide-details
+        />
+      </v-col>
+      <v-col cols="6">
         <v-btn
           color="primary"
           to="/question"
           x-large
+          block
         >
           Start
         </v-btn>
-      </v-card-actions>
-    </v-card>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
+
+<style>
+.select-label {
+  width: 100px;
+}
+.select-field {
+  max-width: 300px;
+}
+</style>
