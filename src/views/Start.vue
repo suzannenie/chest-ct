@@ -15,62 +15,62 @@ export default {
         }
       ],
       selectedDiseases: [],
-      Diseases: [
+      diseases: [
         {
-          text: No Finding,
-          value: no_finding
+          text: "No Finding",
+          value: "no_finding"
         },
         {
-          text: Enlarged Cardiomediastinum,
-          value: enlarged_cardiomediastinum
+          text: "Enlarged Cardiomediastinum",
+          value: "enlarged_cardiomediastinum"
         },
         {
-          text: Cardiomegaly,
-          value: cardiomegaly
+          text: "Cardiomegaly",
+          value: "cardiomegaly"
         },
         {
-          text: Lung Lesion,
-          value: lung_lesion
+          text: "Lung Lesion",
+          value: "lung_lesion"
         },
         {
-          text: Lung Opacity,
-          value: lung_opacity
+          text: "Lung Opacity",
+          value: "lung_opacity"
         },
         {
-          text: Edema,
-          value: edema
+          text: "Edema",
+          value: "edema"
         },
         {
-          text: Consolidation,
-          value: consolidation
+          text: "Consolidation",
+          value: "consolidation"
         },
         {
-          text: Pneumonia,
-          value: pneumonia
+          text: "Pneumonia",
+          value: "pneumonia"
         },
         {
-          text: Atelectasis,
-          value: atelectasis
+          text: "Atelectasis",
+          value: "atelectasis"
         },
         {
-          text: Pneumothorax,
-          value: pneumothorax
+          text: "Pneumothorax",
+          value: "pneumothorax"
         },
         {
-          text: Pleural Effusion,
-          value: pleural_effusion
+          text: "Pleural Effusion",
+          value: "pleural_effusion"
         },
         {
-          text: Pleural Other,
-          value: pleural_other
+          text: "Pleural Other",
+          value: "pleural_other"
         },
         {
-          text: Fracture,
-          value: fracture
+          text: "Fracture",
+          value: "fracture"
         },
         {
-          text: Support Devices,
-          value: support_devices
+          text: "Support Devices",
+          value: "support_devices"
         }
       ]
     }
